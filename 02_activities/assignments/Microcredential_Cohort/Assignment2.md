@@ -47,8 +47,14 @@ There are several tools online you can use, I'd recommend [Draw.io](https://www.
 
 **HINT:** You do not need to create any data for this prompt. This is a conceptual model only. 
 
+![logical ERD prompt 1](images/a2_logical_ERD_a.drawio.png "Logical ERD prompt1")
+
 #### Prompt 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
+
+![logical ERD prompt 2](images/a2_logical_ERD_b.drawio.png "Logical ERD prompt2")
+
+In this ERD, the employee_shifts table has columns: employee_id, employee_name, position_type (i.e. cashier, merchandiser, manager, key holder, etc.), shift_type (will denote whether the employee is scheduled for the morning shift or the evening shift for the respsective shift day), and shift_dates.
 
 #### Prompt 3
 The store wants to keep customer addresses. Propose two architectures for the CUSTOMER_ADDRESS table, one that will retain changes, and another that will overwrite. Which is type 1, which is type 2? 
@@ -56,7 +62,7 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+For the CUSTOMER_ADDRESSES table, we can use a type 1 architechture to overwrite the customer addresses, and a type 2 slowly changing dimensions (SCDs) architechture to retain all changes made to the customer addresses. For the type 1 SCD, we can have two columns, one for the customer_id and another for customer_address. For the type 2 SCD, we can have the following columns: customer_id, customer_address, effective_start (start date of the address on the respective row), effective_end (end date of the address on the respective row), and currently_used (a boolean value to denote whether the address on the current row is the current address for the customer).
 ```
 
 ***
