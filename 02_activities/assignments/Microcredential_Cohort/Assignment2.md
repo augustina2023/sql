@@ -47,7 +47,7 @@ There are several tools online you can use, I'd recommend [Draw.io](https://www.
 
 **HINT:** You do not need to create any data for this prompt. This is a conceptual model only. 
 
-![logical ERD prompt 1](images/a2_logical_ERD_a.drawio.png "Logical ERD prompt1")
+![logical ERD prompt 1](images/ERD_1_A2.drawio.png "Logical ERD prompt1")
 
 #### Prompt 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
